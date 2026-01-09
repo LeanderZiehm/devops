@@ -3,7 +3,7 @@
 # CLI to set up a new web app on leanderziehm.com or tandemexchange.de
 
 # Ask for domain first
-read -p "Select domain [leanderziehm.com / tandemexchange.de] (default: leanderziehm.com): " CHOSEN_DOMAIN
+read -p "Select domain [leanderziehm.com / speaktext.co / tandemexchange.de] (default: leanderziehm.com): " CHOSEN_DOMAIN
 DOMAIN_BASE=${CHOSEN_DOMAIN:-leanderziehm.com}
 
 # Then ask for app name and port
