@@ -1,17 +1,12 @@
 #!/bin/bash
 
-# CLI to set up a new web app on leanderziehm.com or tandemexchange.de
+# CLI to set up a new web app
 
-# Ask for domain first
-read -p "Select domain [leanderziehm.com / speaktext.co / tandemexchange.de] (default: leanderziehm.com): " CHOSEN_DOMAIN
-DOMAIN_BASE=${CHOSEN_DOMAIN:-leanderziehm.com}
+# Ask for full domain
+read -p "Enter your full domain (e.g., example.leanderziehm.com): " DOMAIN
 
-# Then ask for app name and port
-read -p "Enter your web app name (subdomain, e.g., web-change-tracker): " APP_NAME
+# Then ask for port
 read -p "Enter the port your app will run on (e.g., 5014): " APP_PORT
-
-# Construct full domain
-DOMAIN="$APP_NAME.$DOMAIN_BASE"
 
 NGINX_AVAILABLE="/etc/nginx/sites-available/$DOMAIN"
 NGINX_ENABLED="/etc/nginx/sites-enabled/$DOMAIN"
