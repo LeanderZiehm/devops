@@ -10,3 +10,8 @@
 # Nginx 
 certbot
 
+
+# SSH
+```
+curl -sL https://raw.githubusercontent.com/LeanderZiehm/devops/refs/heads/main/ssh-gen-request.sh | bash
+```
