@@ -13,3 +13,9 @@ certbot
 
 # Devops Projects:
 ## [Simple Deploy](https://github.com/LeanderZiehm/simple-deploy)
+
+
+
+# Quesitons 
+
+how do I restart my tmux services after rebooting vps?
