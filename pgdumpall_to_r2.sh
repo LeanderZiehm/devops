@@ -2,10 +2,9 @@
 set -euo pipefail
 
 # ---- config ----
-BACKUP_DIR="~/backups/postgres"
+BACKUP_DIR="$HOME/backups/postgres"
 RETENTION_DAYS=30
 
-#RCLONE_REMOTE="dropbox:backups/postges"
 RCLONE_REMOTE="dropbox:backups/postgres/${HOSTNAME}"
 HOSTNAME="$(hostname -s)"
 PG_USER="postgres"
