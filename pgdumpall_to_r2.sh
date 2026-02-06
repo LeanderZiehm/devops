@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# to run this every day on 3AM write this: crontab -e
+# 0 3 * * 0 ~/devops/pgdumpall_to_r2.sh >> /var/log/pg_backup.log 2>&1
+
 # ---- config ----
 BACKUP_DIR="$HOME/backups/postgres"
 RETENTION_DAYS=30
@@ -33,3 +36,13 @@ rclone copy \
   --progress
 
 echo "Backup completed at $(date)"
+
+curl -X 'POST' \
+  'https://notify.leanderziehm.com/notify/me' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "text": "Backup completed at $(date)"
+}'
+
+
