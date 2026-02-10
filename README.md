@@ -33,3 +33,11 @@ how do I restart my tmux services after rebooting vps?
 | https://lovelingo-game.leanderziehm.com   | Frontend | Lovelingo game module        | lovelingo        | [Livelingo](https://github.com/LeanderZiehm/lovelingo)                                         | Vercel      |
 | https://todo.leanderziehm.com             | Frontend | Todo app frontend            | todo             | [Todo Web App](https://github.com/LeanderZiehm/todo-web-app)                                   | Vercel      |
 | https://todo-api.leanderziehm.com/        | Backend  | Todo backend API             | todo             | [Todo API](https://github.com/LeanderZiehm/apis/tree/main/02_tracker-api)                      | Vercel      |
+# Devops Projects:
+## [Simple Deploy](https://github.com/LeanderZiehm/simple-deploy)
+
+
+
+# Todo
+
+- figure out a good way to auto export .env and load .env from secret manager
