@@ -1,0 +1,13 @@
+#cloud-config
+users:
+  - name: debian
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    groups: sudo
+    shell: /bin/bash
+    lock_passwd: false
+    passwd: $6$rounds=4096$abcdefghijklmnopqrstuv$abcdefghijklmnopqrstuvabcdefghijklmnopqrstuvabcdefghijklmnopqrstuvabcdefghijklmnopqrstuv
+ssh_pwauth: true
+chpasswd:
+  list: |
+    debian:debian
+  expire: false

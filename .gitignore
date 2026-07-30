@@ -1,3 +1,5 @@
+*.qcow2
+*.iso
 archive
 tfplan
 *.json
