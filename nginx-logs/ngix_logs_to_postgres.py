@@ -8,6 +8,8 @@ import psycopg2
 
 DATABASE_URL = os.getenv("DATABASE_URL")
 
+HOSTNAME = os.getenv("HOSTNAME")
+
 if not DATABASE_URL:
     raise RuntimeError("DATABASE_URL is missing from .env")
 
@@ -145,6 +147,7 @@ def upload_logs():
                         cur.execute(
                             """
                             INSERT INTO nginx_requests (
+                                hostname,
                                 request_time,
                                 ip,
                                 method,
@@ -158,6 +161,7 @@ def upload_logs():
                                 raw_log
                             )
                             VALUES (
+                                %(hostname)s,
                                 %(request_time)s,
                                 %(ip)s,
                                 %(method)s,
@@ -175,6 +179,7 @@ def upload_logs():
                             """,
                             {
                                 **parsed,
+                                "hostname": HOSTNAME,
                                 "source_file": filename,
                             }
                         )
