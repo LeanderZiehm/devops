@@ -4,3 +4,6 @@ run:
 
 setup:
 	bash setup
+
+container:
+	podman build -t nginx-logs . && podman run --rm --network=host --env-file .env nginx-logs
