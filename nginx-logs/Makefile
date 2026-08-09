@@ -1,5 +1,5 @@
 container:
-	podman build -t nginx-logs . && podman run --replace --rm --name nginx-logs --network=host --group-add keep-groups --env-file .env -e HOSTNAME="$(hostname)" -v /var/log/nginx:/var/log/nginx:ro,Z nginx-logs
+	podman build -t nginx-logs . && podman run --replace --rm --name nginx-logs --network=host --group-add keep-groups --env-file .env -e HOSTNAME="$$(hostname)" -v /var/log/nginx:/var/log/nginx:ro,Z nginx-logs
 # 	podman build -t nginx-logs . && podman run --rm --network=host --group-add keep-groups --env-file .env -e HOSTNAME="$(hostname)" -v "$PWD/test-nginx-logs":/var/log/nginx:ro,Z nginx-logs
 
 local:

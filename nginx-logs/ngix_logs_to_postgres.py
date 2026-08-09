@@ -11,6 +11,8 @@ import psycopg2
 DATABASE_URL = os.getenv("DATABASE_URL")
 HOSTNAME = os.getenv("HOSTNAME")
 
+print("HOSTNAME:",HOSTNAME)
+
 BATCH_SIZE = 5000
 
 if not DATABASE_URL:
