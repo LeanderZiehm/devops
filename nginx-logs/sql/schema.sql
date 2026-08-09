@@ -1,4 +1,4 @@
-create table if not exists nginx_requests (
+CREATE TABLE IF NOT EXISTS nginx_requests (
     id bigint generated always as identity primary key,
     hostname text,
     request_time timestamptz not null,
@@ -12,8 +12,9 @@ create table if not exists nginx_requests (
     user_agent text,
     source_file text,
     raw_log text not null,
-    created_at timestamptz not null default now()
-);
+    raw_log_hash text not null,
+    created_at timestamptz not null default now(),
 
-create unique index if not exists nginx_requests_dedup_idx
-on nginx_requests (request_time, ip, raw_log);
+    CONSTRAINT nginx_requests_raw_log_hash_unique
+        UNIQUE (raw_log_hash)
+);

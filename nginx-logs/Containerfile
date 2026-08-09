@@ -9,7 +9,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy application
 COPY ngix_logs_to_postgres.py .
-COPY nginx_logs.py .
 
 # Run the application
 CMD ["python", "ngix_logs_to_postgres.py"]
