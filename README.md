@@ -2,14 +2,21 @@
 
 
 ## Setup Nginx:
-```
+```sh
 curl -O https://raw.githubusercontent.com/LeanderZiehm/devops/refs/heads/main/setup-nginx.sh
 ```
 
 ## Backup Postges:
-```
+```sh
 curl -O https://raw.githubusercontent.com/LeanderZiehm/devops/refs/heads/main/backup-postgres.sh
 ```
+
+# Git Key
+```sh
+curl -O https://raw.githubusercontent.com/leanderziehm/devops/refs/heads/main/gitkey1.py
+```
+
+
 # Git clone 
 
 ```
