@@ -1,6 +1,11 @@
 # Devops
 
 
+## Setup Devops:
+```sh
+curl -O https://raw.githubusercontent.com/leanderziehm/devops/refs/heads/main/setup.sh && bash setup.sh
+```
+
 ## Setup Nginx:
 ```sh
 curl -O https://raw.githubusercontent.com/LeanderZiehm/devops/refs/heads/main/setup-nginx.sh
