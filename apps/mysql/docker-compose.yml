@@ -1,0 +1,15 @@
+services:
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'mysql'
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+
+    ports:
+      - "3306:3306"
+
+  # volumes:
+  #   - ./data/conf.d:/etc/mysql/conf.d
+  #   - ./data/logs:/logs
+  #   - /usr/local/var/mysql:/var/lib/mysql
